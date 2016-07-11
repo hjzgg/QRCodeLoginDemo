@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exe4j version="5.0.1" transformSequenceNumber="2">
+  <directoryPresets config="C:/Users/Administrator/Desktop/QRCode" />
+  <application name="QRCodeDemo" distributionSourceDir="C:/Users/Administrator/Desktop/QRCode">
+    <languages>
+      <principalLanguage id="en" customLocalizationFile="" />
+    </languages>
+  </application>
+  <executable name="QRCode" type="2" iconSet="true" iconFile="C:/Users/Administrator/Desktop/QRCode/frame.ico" executableDir="." redirectStderr="true" stderrFile="error.log" stderrMode="overwrite" redirectStdout="false" stdoutFile="output.log" stdoutMode="overwrite" failOnStderrOutput="true" executableMode="1" changeWorkingDirectory="true" workingDirectory="." singleInstance="false" serviceStartType="2" serviceDependencies="" serviceDescription="" jreLocation="" executionLevel="asInvoker" checkConsoleParameter="false" globalSingleInstance="false" singleInstanceActivate="true" dpiAware="false" amd64="true">
+    <messageSet />
+    <versionInfo include="false" fileVersion="" fileDescription="" legalCopyright="" internalName="" productName="" companyName="" productVersion="" />
+  </executable>
+  <splashScreen show="true" width="500" height="335" bitmapFile="C:/Users/Administrator/Desktop/QRCode/start.png" windowsNative="false" textOverlay="true">
+    <text>
+      <statusLine x="20" y="20" text="TwoDimensionCode" fontSize="15" fontColor="255,0,0" bold="true" />
+      <versionLine x="20" y="40" text="version %VERSION%" fontSize="15" fontColor="0,0,0" bold="true" />
+    </text>
+  </splashScreen>
+  <java mainClass="com.hjz.main.CodeFrame" vmParameters="" arguments="" allowVMPassthroughParameters="true" preferredVM="" bundleRuntime="true" minVersion="18" maxVersion="" allowBetaVM="false" jdkOnly="false">
+    <searchSequence>
+      <directory location="./jre1.8.0_92" />
+      <registry />
+      <envVar name="JAVA_HOME" />
+      <envVar name="JDK_HOME" />
+    </searchSequence>
+    <classPath>
+      <archive location="C:/Users/Administrator/Desktop/QRCode/QRCodeDemo.jar" failOnError="false" />
+      <archive location="C:/Users/Administrator/Desktop/QRCode/lib/QRCode.jar" failOnError="false" />
+    </classPath>
+    <nativeLibraryDirectories />
+  </java>
+  <includedFiles />
+  <unextractableFiles />
+</exe4j>

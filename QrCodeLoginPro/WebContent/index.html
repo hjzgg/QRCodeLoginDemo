@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<body>
+	<div id="divCon">
+		<img src="" id="QrCodeImg" />
+	</div>
+</body>
+<script type="text/javascript">
+	$(document).ready(function() {
+		var uuid;
+		$.get("/QrCodeLoginPro/GetQrCodeServlet", function(data, status) {
+			var obj = eval("(" + data + ")");
+			//存储UUID
+			uuid = obj.uuid;
+			//显示二维码
+			$("#QrCodeImg").attr("src", obj.qrCodeImg);
+			//开始验证登录
+			validateLogin();
+		});
+
+		function validateLogin(){
+			$.get("/QrCodeLoginPro/LongConnectionCheckServlet?uuid=" + uuid , function(data, status) {
+				if(data == ""){
+					validateLogin();
+				}else{
+					var obj = eval("(" + data + ")");
+					alert("登录成功了:" + obj.uname);
+				}
+			});
+		}
+	});
+</script>
+</html>
